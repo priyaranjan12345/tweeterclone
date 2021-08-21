@@ -29,10 +29,9 @@ class MyWidgets {
       content: Container(
         padding: const EdgeInsets.all(10),
         child: Row(
-         mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+          mainAxisAlignment: MainAxisAlignment.spaceEvenly,
           children: const [
             CircularProgressIndicator(),
-            
             Text("Loading..."),
           ],
         ),
@@ -51,5 +50,20 @@ class MyWidgets {
         barrierDismissible: false,
         textConfirm: "ok",
         confirmTextColor: Colors.white);
+  }
+
+  void mysnacbar(String alert, String msg) {
+    Get.snackbar(
+      alert,
+      msg,
+      backgroundColor: Colors.lightBlue,
+      colorText: Colors.white,
+      borderRadius: 30,
+      margin: const EdgeInsets.only(
+        left: 10,
+        right: 10,
+        top: 40,
+      ),
+    );
   }
 }

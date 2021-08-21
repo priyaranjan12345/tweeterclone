@@ -7,23 +7,27 @@ import 'package:twitterclone/widgets/mywidgets.dart';
 TextEditingController message = TextEditingController();
 
 class TweetPage extends StatelessWidget {
-  const TweetPage({Key key}) : super(key: key);
+  final VoidCallback ontapped;
+  const TweetPage(this.ontapped);
 
   @override
   Widget build(BuildContext context) {
-    return const Scaffold(
+    return Scaffold(
       resizeToAvoidBottomInset: false,
       appBar: PreferredSize(
-        preferredSize: Size(160, 60),
-        child: MyAppBar(),
+        preferredSize: const Size(160, 60),
+        child: MyAppBar(
+          () => ontapped(),
+        ),
       ),
-      body: MyBody(),
+      body: const MyBody(),
     );
   }
 }
 
 class MyAppBar extends StatelessWidget {
-  const MyAppBar({Key key}) : super(key: key);
+  final VoidCallback ontapped;
+  const MyAppBar(this.ontapped);
 
   @override
   Widget build(BuildContext context) {
@@ -48,9 +52,10 @@ class MyAppBar extends StatelessWidget {
           ),
           child: ElevatedButton(
             onPressed: () async {
-              await insertData(message.text);
-              message.clear();
               Get.back();
+              await insertData(message.text);
+              ontapped();
+              message.clear();
             },
             child: const Text("Tweet"),
             style: ButtonStyle(

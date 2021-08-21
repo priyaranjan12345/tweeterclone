@@ -70,7 +70,10 @@ class _ChildHomeState extends State<ChildHome> {
             alignment: const Alignment(0.9, 0.92),
             child: FloatingActionButton(
               onPressed: () {
-                Get.to(() => const TweetPage());
+                Get.to(() => TweetPage(() {
+                      
+                      MyWidgets().mysnacbar("Info", "Data posted sucessfully");
+                    }));
               },
               child: const Icon(Icons.add),
             ),
@@ -279,7 +282,7 @@ botomSheet(String id, String msg) {
                 bool isdeleted = await deleteData(id);
                 if (isdeleted) {
                   Get.back();
-                  MyWidgets().dialogmsg("Data deleted");
+                  MyWidgets().mysnacbar("Alert", "Data deleted sucessfully");
                 } else {
                   Get.back();
                   MyWidgets().dialogmsg("Data not deleted");
