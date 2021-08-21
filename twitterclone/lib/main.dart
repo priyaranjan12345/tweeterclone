@@ -8,7 +8,6 @@ import 'package:twitterclone/pages/parrent.dart';
 
 import 'package:twitterclone/services/firebaseservice.dart';
 
-
 void main() async {
   WidgetsFlutterBinding.ensureInitialized();
   await Firebase.initializeApp();
@@ -44,7 +43,10 @@ class MyApp extends StatelessWidget {
         ),
       ),
       getPages: [
-        GetPage(name: '/', page: () => const Home()),
+        GetPage(
+          name: '/',
+          page: () => const Home(),
+        ),
         GetPage(
           name: "/auth",
           page: () => const AuthPage(),
