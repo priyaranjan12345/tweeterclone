@@ -90,11 +90,7 @@ class MyNevigationBar extends StatelessWidget {
             icon: const Icon(Icons.notifications_outlined),
           ),
           CustomNavigationBarItem(
-            icon: Image.asset(
-              'assets/images/ev.png',
-              height: 26,
-              fit: BoxFit.contain,
-            ),
+            icon: const Icon(Icons.email_outlined),
           ),
         ],
         currentIndex: _controller.id.value,
