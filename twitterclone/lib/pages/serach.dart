@@ -5,8 +5,16 @@ class ChildSearch extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return const Center(
-      child: Text("User can search here"),
+    return Center(
+      child: Column(
+        children: [
+          const Text("search"),
+          Container(
+            padding: const EdgeInsets.all(40),
+            child: const TextField(),
+          ),
+        ],
+      ),
     );
   }
 }

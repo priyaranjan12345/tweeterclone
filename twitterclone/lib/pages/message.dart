@@ -5,8 +5,16 @@ class ChildMessage extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return const Center(
-      child: Text("message"),
+    return Center(
+      child: Column(
+        children: [
+          const Text("message"),
+          Container(
+            padding: const EdgeInsets.all(40),
+            child: const TextField(),
+          ),
+        ],
+      ),
     );
   }
 }
