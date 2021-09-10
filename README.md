@@ -3,7 +3,7 @@
 Screen Shots
 
 
-![Native Splash Screen](https://user-images.githubusercontent.com/47207977/132800808-83b1a978-250f-41fe-959e-ef0582ffa9a1.png) <\t> ![Auth Screen](https://user-images.githubusercontent.com/47207977/132800817-07f51339-c0af-4134-8c63-954f6fd86fc4.png)
+![Native Splash Screen](https://user-images.githubusercontent.com/47207977/132800808-83b1a978-250f-41fe-959e-ef0582ffa9a1.png) &emsp; ![Auth Screen](https://user-images.githubusercontent.com/47207977/132800817-07f51339-c0af-4134-8c63-954f6fd86fc4.png)
 
 ![Create User](https://user-images.githubusercontent.com/47207977/132800825-73039454-5ac3-450d-8513-721fd08a4b0c.png)                         ![Login Screen](https://user-images.githubusercontent.com/47207977/132800834-8e78d8b2-bf0b-4a22-a28e-c5789c78fdec.png)
 
